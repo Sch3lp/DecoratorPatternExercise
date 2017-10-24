@@ -1,4 +1,4 @@
-public class KlimmuurActiviteit extends HallowFitActiviteitenDecorator {
+public class KlimmuurActiviteit extends HallowFitActiviteitOptie {
 
     private final int kostprijs = 5;
 

@@ -1,4 +1,4 @@
-public class GroepslessenKorting extends HallowFitKortingDecorator {
+public class GroepslessenKorting extends HallowFitKortingOptie {
 
     public GroepslessenKorting(LidKaart lidkaart) {
         super(lidkaart);

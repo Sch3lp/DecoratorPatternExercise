@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class HallowFitKortingDecoratorTest {
+public class HallowFitKortingOptieTest {
 
     private HallowFitLidKaart hallowFitLidKaart;
 
@@ -14,13 +14,13 @@ public class HallowFitKortingDecoratorTest {
 
     @Test
     public void omschrijving_VoegtKortingToe() throws Exception {
-        DummyHallowFitKortingDecorator hallowFitDecorator = new DummyHallowFitKortingDecorator(hallowFitLidKaart);
+        DummyHallowFitKortingOptie hallowFitKortingOptie = new DummyHallowFitKortingOptie(hallowFitLidKaart);
 
-        assertThat(hallowFitDecorator.omschrijving()).isEqualTo("HallowFit\nKorting - ");
+        assertThat(hallowFitKortingOptie.omschrijving()).isEqualTo("HallowFit\nKorting - ");
     }
 
-    private class DummyHallowFitKortingDecorator extends HallowFitKortingDecorator {
-        public DummyHallowFitKortingDecorator(HallowFitLidKaart lidKaart) {
+    private class DummyHallowFitKortingOptie extends HallowFitKortingOptie {
+        public DummyHallowFitKortingOptie(HallowFitLidKaart lidKaart) {
             super(lidKaart);
         }
 

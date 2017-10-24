@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class HallowFitActiviteitenDecoratorTest {
+public class HallowFitActiviteitOptieTest {
 
     private HallowFitLidKaart hallowFitLidKaart;
 
@@ -14,13 +14,13 @@ public class HallowFitActiviteitenDecoratorTest {
 
     @Test
     public void omschrijving_VoegtActiviteitenToe() throws Exception {
-        DummyHallowFitActiviteitenDecorator hallowFitDecorator = new DummyHallowFitActiviteitenDecorator(hallowFitLidKaart);
+        DummyHallowFitActiviteitOptie hallowFitActiviteitOpties = new DummyHallowFitActiviteitOptie(hallowFitLidKaart);
 
-        assertThat(hallowFitDecorator.omschrijving()).isEqualTo("HallowFit\nActiviteit - ");
+        assertThat(hallowFitActiviteitOpties.omschrijving()).isEqualTo("HallowFit\nActiviteit - ");
     }
 
-    private class DummyHallowFitActiviteitenDecorator extends HallowFitActiviteitenDecorator {
-        public DummyHallowFitActiviteitenDecorator(HallowFitLidKaart lidKaart) {
+    private class DummyHallowFitActiviteitOptie extends HallowFitActiviteitOptie {
+        public DummyHallowFitActiviteitOptie(HallowFitLidKaart lidKaart) {
             super(lidKaart);
         }
 

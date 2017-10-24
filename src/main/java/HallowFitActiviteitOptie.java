@@ -1,8 +1,8 @@
-public abstract class HallowFitActiviteitenDecorator implements LidKaart {
+public abstract class HallowFitActiviteitOptie implements LidKaart {
 
     private LidKaart lidkaart;
 
-    public HallowFitActiviteitenDecorator(LidKaart lidkaart) {
+    public HallowFitActiviteitOptie(LidKaart lidkaart) {
         this.lidkaart = lidkaart;
     }
 

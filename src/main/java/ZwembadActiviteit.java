@@ -1,4 +1,4 @@
-public class ZwembadActiviteit extends HallowFitActiviteitenDecorator {
+public class ZwembadActiviteit extends HallowFitActiviteitOptie {
 
     private final int kostprijs = 3;
 
