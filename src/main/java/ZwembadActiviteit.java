@@ -1,6 +1,6 @@
 public class ZwembadActiviteit extends HallowFitActiviteitOptie {
 
-    private final int kostprijs = 3;
+    private static final int KOSTPRIJS = 3;
 
     public ZwembadActiviteit(LidKaart lidkaart) {
         super(lidkaart);
@@ -8,11 +8,11 @@ public class ZwembadActiviteit extends HallowFitActiviteitOptie {
 
     @Override
     public double kostprijs() {
-        return getLidKaart().kostprijs() + kostprijs;
+        return getLidKaart().kostprijs() + KOSTPRIJS;
     }
 
     @Override
     public String omschrijving() {
-        return super.omschrijving() + String.format("Zwembad: %d\n",kostprijs);
+        return super.omschrijving() + String.format("Zwembad: %d\n", KOSTPRIJS);
     }
 }

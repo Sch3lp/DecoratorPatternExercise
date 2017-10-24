@@ -34,7 +34,7 @@ public class HallowFitLidKaartTest {
     }
 
     @Test
-    public void lidkaartMetZwembadKlimmuurEnGroepslessen_VerkeerdeVolgorde_GebruiktKortingVerkeerd() throws Exception {
+    public void lidkaartMetZwembadIndividueelEnKlimmuurInGroep_GebruiktKortingVerkeerd() throws Exception {
         LidKaart lidkaart = new ZwembadActiviteit(new GroepslessenKorting(new KlimmuurActiviteit(new HallowFitLidKaart())));
 
         assertThat(lidkaart.kostprijs()).isEqualTo(((10 + 5) * 0.9) + 3);
