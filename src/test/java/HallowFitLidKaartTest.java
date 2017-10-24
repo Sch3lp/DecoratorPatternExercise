@@ -17,6 +17,16 @@ public class HallowFitLidKaartTest {
     }
 
     @Test
+    public void lidkaartBuilder() throws Exception {
+        LidKaart lidkaart = HallowFitLidKaart.eenLidKaart()
+                .metKlimmuur()
+                .metZwembad()
+                .alsGroeples()
+                .build();
+        assertThat(lidkaart.kostprijs()).isEqualTo((10 + 5 + 3) * 0.9);
+    }
+
+    @Test
     public void lidkaartMetZwembadKlimmuurEnGroepslessen_GebruiktKortingOpTotaal() throws Exception {
         LidKaart lidkaart = new GroepslessenKorting(new ZwembadActiviteit(new KlimmuurActiviteit(new HallowFitLidKaart())));
 
